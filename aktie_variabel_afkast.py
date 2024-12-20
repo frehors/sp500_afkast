@@ -3,8 +3,7 @@ import pandas as pd
 import seaborn as sns
 from scipy.stats.mstats import gmean
 
-str_csv_path = r"C:\Users\frede\Downloads\chart.csv"
-df = pd.read_csv(str_csv_path)
+df = pd.read_csv("chart.csv")
 df["Return"] = df["Return"].div(100).add(1)
 
 N = 10000
