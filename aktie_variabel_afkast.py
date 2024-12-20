@@ -7,7 +7,7 @@ str_csv_path = r"C:\Users\frede\Downloads\chart.csv"
 df = pd.read_csv(str_csv_path)
 df["Return"] = df["Return"].div(100).add(1)
 
-N = 1000
+N = 10000
 years = 10
 
 dict_cols = {}
@@ -43,8 +43,8 @@ axes[2].set_ylabel("density")
 
 textstr = (f"avg yearly return: {avg_return}%"
            f"\nmedian yearly return: {median_return}%"
-           f"\navg sharpe : {sharpe_ratios_mean}%"
-           f"\nmedian sharpe: {sharpe_ratios_median}%")
+           f"\navg sharpe : {sharpe_ratios_mean}"
+           f"\nmedian sharpe: {sharpe_ratios_median}")
 props = dict(boxstyle='round,pad=0.3', facecolor='white', edgecolor='black', linewidth=1.5)
 axes[2].text(1.05, 0.9, textstr, transform=axes[2].transAxes, fontsize=12,
              verticalalignment='top', horizontalalignment='left', bbox=props)
